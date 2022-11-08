@@ -32,6 +32,23 @@ class LinkedList {
         return length
     }
 
+    //first node
+    firstNode(){
+        return this.head;
+    }
+
+    //last node 
+    lastNode() {
+        let lastItem = this.head;
+        if(lastItem){
+            while(lastItem.next){
+                lastItem = lastItem.next;
+            }
+        }
+
+        return lastItem;
+    }
+
 }
 
 class Node {
@@ -47,3 +64,5 @@ console.log(newList.append(newNode))
 console.log(newList.append(new Node (20)))
 console.log(newList.append(new Node (30)))
 console.log(newList.length())
+console.log(newList.firstNode())
+console.log(newList.lastNode())
